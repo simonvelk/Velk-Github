@@ -1,0 +1,51 @@
+---
+import '@/styles/globals.css'
+import MyDrawer from '@/components/mine/mydrawer'
+import MyAccordion from '@/components/mine/myaccordion'
+import MyCarousel from '@/components/mine/mycarousel'
+import { Button } from '@/components/ui/button'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Astro / Shadcn Test</h1>
+			<div class="grid">
+				<div class="grid-content">
+<h2 class="font-bold text-2xl text-teal-400">This is an Accordian that can be used for a FAQ Document</h2>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto enim eos error quos at saepe, inventore incidunt reiciendis, expedita hic nemo dolores impedit non ipsum deserunt possimus culpa sed in.</p>
+			</div>
+		<div class="grid-content">
+			<MyDrawer client:load/> 
+	<MyAccordion client:load/>
+	<MyCarousel client:load/>
+			<Button>Hello!</Button>
+
+
+			</div>	
+		</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	.wrapper{
+		width: clamp(350px, 80%, 1200px);
+		padding-block: 4rem;
+		margin: 0 auto;
+	}
+
+	.grid{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: center;
+		gap: 3rem;
+	}
+</style>
